@@ -1,0 +1,16 @@
+create table "BOARD" (
+  "NUM" number primary key,
+  "TITLE" varchar2(50) not_null,
+  "WRITER" varchar2(50) not_null,
+  "CONTENT" varchar2(1000),
+  "REGDATE" date,
+  "CNT" number default 0
+);
+
+create sequence "BOARD SEQ"
+  start with 1
+  increment by 1
+  maxvalue 99999
+  nocache
+  nocycle
+  noorder;
